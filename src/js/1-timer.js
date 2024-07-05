@@ -102,8 +102,13 @@ const options = {
         userSelectedDate = selectedDates[0];
       if(!userSelectedDate || userSelectedDate <= new Date()) {
         iziToast.warning({
-                message:"Please choose a date in the future"
-               
+            icon: '',
+            messageColor: 'white',
+            position: 'topRight',
+            messageSize: '10px',
+            backgroundColor: 'red',
+            
+            message:"Please choose a date in the future"
                 });
         dataStart.disabled = true;
       } else{
@@ -116,7 +121,13 @@ const options = {
   // Додавання обробника події на кнопку "Start"
   dataStart.addEventListener('click', () => {
     if (!userSelectedDate || userSelectedDate <= new Date()) {
-        iziToast.warning({
+        iziToast.show({
+            icon: '',
+            messageColor: 'white',
+            position: 'topRight',
+            messageSize: '10px',
+            backgroundColor: 'red',
+            
             message:"Please choose a date in the future"
         });
        return;
