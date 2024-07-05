@@ -1,0 +1,24 @@
+.timer{
+    display: flex;
+    gap: 10px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.value{
+    font-size: 2rem;
+}
+.label{
+    font-size: 1rem;
+}
+.iziToast.warning .iziToast-message {
+    background-color: #FF6347;
+    color: white;
+    border-radius: 5px;
+}
+
+.iziToast.warning .iziToast-icon i {
+    color: #808080; 
+}
