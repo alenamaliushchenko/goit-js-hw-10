@@ -32,6 +32,7 @@
 import iziToast from "izitoast";
 // Додатковий імпорт стилів
 import "izitoast/dist/css/iziToast.min.css";
+import "../css/snackbar.css";
 
 document.getElementById('promise-form').addEventListener ('submit', function(event) {
     event.preventDefault();
@@ -41,7 +42,7 @@ document.getElementById('promise-form').addEventListener ('submit', function(eve
 
     const promise = new Promise((resolve, reject) => {
         setTimeout (() => {
-            if(state === "success") {
+            if(state === "fulfilled") {
                     resolve(`✅ Fulfilled promise in ${delay}ms`);
             } else {
                     reject(`❌ Rejected promise in ${delay}ms`);
@@ -51,16 +52,19 @@ document.getElementById('promise-form').addEventListener ('submit', function(eve
         promise
         .then(message => {
             iziToast.show ({
-                title: 'Success',
+               
+                message:`✅ Fulfilled promise in ${delay}ms`,
                 backgroundColor: 'green',
                 messageColor: 'white',
                 position: 'topRight',
-                messageSize: '10px'
+                messageSize: '10px',
+                icon: 'no-border-icon'
             });
         })
         .catch (message => {
             iziToast.show ({
-                title: 'Error',
+                
+                message:`❌ Rejected promise in ${delay}ms`,
                 backgroundColor: 'red',
                 messageColor: 'white',
                 position: 'topRight',

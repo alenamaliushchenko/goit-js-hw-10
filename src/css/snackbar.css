@@ -1,0 +1,55 @@
+.form {
+    max-width: 40%; /* Зменшення ширини форми */
+    margin: 0 auto; /* Центрування форми */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input[type="number"],
+.form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.iziToast {
+    border-radius: 10px !important;
+    text-align: left !important;
+   
+}
+.iziToast .iziToast-icon{
+    border: none !important;
+}
+
+.iziToast-message {
+    margin: 0 !important; /* Видалення додаткового відступу */
+    text-align: left !important; /* Вирівнювання тексту по лівому краю */
+}
